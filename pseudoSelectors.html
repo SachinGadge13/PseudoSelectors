@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and after pseudo selector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+        header::before {
+            content: "";
+            background: url(https://source.unsplash.com/random)no-repeat center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .navbar {
+            float: none;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .navigation {
+            /* border: 2px solid red; */
+            margin: 100px;
+            padding: 20px;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            font-family: 'Bree Serif', serif;
+            display: flex;
+            /* flex-wrap: wrap-reverse; */
+            /* position: static; */
+            font-size: 30px;
+
+        }
+
+        .navigation li a {
+
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .navigation li a:hover {
+            background-color: rgba(243, 234, 234, 0.306);
+            text-decoration: underline;
+        }
+
+        li {
+            list-style: none;
+            padding: 30px 70px;
+        }
+
+        section {
+
+            font-family: 'Bree Serif', serif;
+            height: 300px;
+            /* border: 2px solid red; */
+            margin: 40px 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* section::after{
+            content: "This is a content before section";
+        } */
+        h1 {
+
+            font-size: 4rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .footer {
+            margin: 120px 200px;
+            padding: 1px;
+            text-align: center;
+            /* border: 2px solid red; */
+            border-radius: 100px;
+
+        }
+
+        h4 {
+            text-align: center;
+            width: 200px;
+            display: inline-block;
+            text-decoration: underline;
+            border: 2px solid white;
+            border-radius: 200px;
+            
+
+        }
+
+        .footerlinks {
+            display: flex;
+            flex-flow: row wrap;
+            font-size: 50px;
+            /* list-style: none; */
+            text-decoration: none;
+            text-align: justify;
+            justify-content: space-around;
+        }
+
+        .new {
+            color: white;
+        }
+
+        #github {
+            transition: 0ms;
+        }
+
+        #github i:hover {
+            background-color: rgb(53, 51, 51);
+        }
+
+        #linkedin {
+            transition: 0ms;
+        }
+
+        #linkedin i:hover {
+            background-color: blue;
+        }
+
+        #fb {
+            transition: 0ms;
+        }
+
+        #fb i:hover {
+            background-color: blue;
+            /* color: white; */
+        }
+
+        #insta {
+            color: white;
+            transition: 0ms;
+        }
+
+        #insta i:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Welcome to coding world</h1>
+        <p>
+            A developer is someone who creates software or applications. They may work in a variety of industries, including computer science, web development, and mobile app development. Developers typically have a strong understanding of computer programming and coding. They use this knowledge to create software that meets the needs of their clients or customers
+        </p>
+    </section>
+    <hr>
+
+    <footer class="footer">
+        <h4>SOCIAL HANDLES </h4>
+
+        <nav class="footerlinks">
+            <div class="handles" id="github">
+                <a href="https://github.com/SachinGadge13" target="_blank" class="new"><i
+                        class="fa-brands fa-github"></i></a>
+            </div>
+
+            <div class="handles" id="linkedin">
+                <a href="https://www.linkedin.com/in/sachin-gadge-148259181/" target="_blank" class="new"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+
+            <div class="handles" id="fb">
+                <a href="https://www.facebook.com/sachin.gadge.10236" target="_blank" class="new"><i
+                        class="fa-brands fa-facebook"></i></a>
+            </div>
+
+            <div class="handles" id="insta">
+                <a href="https://www.instagram.com/sachin_gadge_/" target="_blank" class="new"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+            </div>
+
+        </nav>
+    </footer>
+</body>
+
+</html>
